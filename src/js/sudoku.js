@@ -44,3 +44,19 @@ const isRowSafe = (grid, row, value) => {
     }
     return true;
 }
+
+//check duplicate number in 3x3 box
+const isBoxSafe = (grid, box_row, box_col, value) => {
+    for(let row = 0; row < CONSTANT.BOX_SIZE; row++){
+        for(let col = 0; col < CONSTANT.BOX_SIZE; col++){
+            if(grid[row + box_row][col + box_col] === value)
+            return false;
+        }
+        return true;
+    }
+}
+
+//check in row, col and 3X3 box
+const isSafe = (grid, row, col, value) => {
+    return isColSafe(grid, col, value) && isRowSafe(grid,row, value) && isBoxSafe(grid, row - row%3, col - col%3, value) && value !== CONSTANT.UNASSIGNED;
+}
