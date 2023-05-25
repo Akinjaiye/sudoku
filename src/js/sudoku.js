@@ -13,3 +13,20 @@ const CONSTANT ={
     ],
     LEVEL: [29, 38,47,56,65,74]
 }
+
+
+const newGrid = (size) => {
+    let arr = new Array(size);
+
+    for(let i = 0; i < size; i++){
+        arr[i] = new Array(size);
+    }
+
+    for(let i = 0; i < Math.pow(size, 2); i++){
+        arr[Math.floor(i/size)][i%size] = CONSTANT.UNASSIGNED;
+    }
+
+    return arr;
+}
+
+//check 
