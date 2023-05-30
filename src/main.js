@@ -318,24 +318,24 @@ const initCellsEvent = () => {
     })
 }
 
-// const startGame = () => {
-//     start_screen.classList.remove('active');
-//     game_screen.classList.add('active');
+const startGame = () => {
+    start_screen.classList.remove('active');
+    game_screen.classList.add('active');
 
-//     player_name.innerHTML = name_input.value.trim();
-//     setPlayerName(name_input.value.trim());
+    player_name.innerHTML = name_input.value.trim();
+    setPlayerName(name_input.value.trim());
 
-//     game_level.innerHTML = CONSTANT.LEVEL_NAME[level_index];
+    game_level.innerHTML = CONSTANT.LEVEL_NAME[level_index];
 
-//     showTime(seconds);
+    showTime(seconds);
 
-//     timer = setInterval(() => {
-//         if (!pause) {
-//             seconds = seconds + 1;
-//             game_time.innerHTML = showTime(seconds);
-//         }
-//     }, 1000);
-// }
+    timer = setInterval(() => {
+        if (!pause) {
+            seconds = seconds + 1;
+            game_time.innerHTML = showTime(seconds);
+        }
+    }, 1000);
+}
 
 // const returnStartScreen = () => {
 //     clearInterval(timer);
