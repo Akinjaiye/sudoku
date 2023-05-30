@@ -1,18 +1,18 @@
-// const CONSTANT = {
-//     UNASSIGNED: 0,
-//     GRID_SIZE: 9,
-//     BOX_SIZE: 3,
-//     NUMBERS: [1,2,3,4,5,6,7,8,9],
-//     LEVEL_NAME: [
-//         'Easy',
-//         'Medium',
-//         'Hard',
-//         'Very hard',
-//         'Insane',
-//         'Inhuman'
-//     ],
-//     LEVEL: [29, 38, 47, 56, 65, 74]
-// }
+const CONSTANT = {
+    UNASSIGNED: 0,
+    GRID_SIZE: 9,
+    BOX_SIZE: 3,
+    NUMBERS: [1,2,3,4,5,6,7,8,9],
+    LEVEL_NAME: [
+        'Easy',
+        'Medium',
+        'Hard',
+        'Very hard',
+        'Insane',
+        'Inhuman'
+    ],
+    LEVEL: [29, 38, 47, 56, 65, 74]
+}
 
 // export const newGrid = (size) => {
 //     let arr = new Array(size);
@@ -157,7 +157,7 @@
 
 // export const rand = () => Math.floor(Math.random() * CONSTANT.GRID_SIZE);
 
-// export const removeCells = (grid, level) => {
+// const removeCells = (grid, level) => {
 //     let res = [...grid];
 //     let attemps = level;
 //     while (attemps > 0) {
@@ -173,7 +173,7 @@
 //     return res;
 // }
 
-// // generate sudoku base on level
+// generate sudoku base on level
 // export const sudokuGen = (level) => {
 //     let sudoku = newGrid(CONSTANT.GRID_SIZE);
 //     let check = sudokuCreate(sudoku);
