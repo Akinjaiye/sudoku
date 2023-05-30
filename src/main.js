@@ -354,82 +354,82 @@ document.querySelector('#btn-level').addEventListener('click', (e) => {
     e.target.innerHTML = CONSTANT.LEVEL_NAME[level_index];
 });
 
-// document.querySelector('#btn-play').addEventListener('click', () => {
-//     if (name_input.value.trim().length > 0) {
-//         initSudoku();
-//         startGame();
-//     } else {
-//         name_input.classList.add('input-err');
-//         setTimeout(() => {
-//             name_input.classList.remove('input-err');
-//             name_input.focus();
-//         }, 500);
-//     }
-// });
+document.querySelector('#btn-play').addEventListener('click', () => {
+    if (name_input.value.trim().length > 0) {
+        initSudoku();
+        startGame();
+    } else {
+        name_input.classList.add('input-err');
+        setTimeout(() => {
+            name_input.classList.remove('input-err');
+            name_input.focus();
+        }, 500);
+    }
+});
 
-// document.querySelector('#btn-continue').addEventListener('click', () => {
-//     if (name_input.value.trim().length > 0) {
-//         loadSudoku();
-//         startGame();
-//     } else {
-//         name_input.classList.add('input-err');
-//         setTimeout(() => {
-//             name_input.classList.remove('input-err');
-//             name_input.focus();
-//         }, 500);
-//     }
-// });
+document.querySelector('#btn-continue').addEventListener('click', () => {
+    if (name_input.value.trim().length > 0) {
+        loadSudoku();
+        startGame();
+    } else {
+        name_input.classList.add('input-err');
+        setTimeout(() => {
+            name_input.classList.remove('input-err');
+            name_input.focus();
+        }, 500);
+    }
+});
 
-// document.querySelector('#btn-pause').addEventListener('click', () => {
-//     pause_screen.classList.add('active');
-//     pause = true;
-// });
+document.querySelector('#btn-pause').addEventListener('click', () => {
+    pause_screen.classList.add('active');
+    pause = true;
+});
 
-// document.querySelector('#btn-resume').addEventListener('click', () => {
-//     pause_screen.classList.remove('active');
-//     pause = false;
-// });
+document.querySelector('#btn-resume').addEventListener('click', () => {
+    pause_screen.classList.remove('active');
+    pause = false;
+});
 
-// document.querySelector('#btn-new-game').addEventListener('click', () => {
-//     returnStartScreen();
-// });
+document.querySelector('#btn-new-game').addEventListener('click', () => {
+    returnStartScreen();
+});
 
-// document.querySelector('#btn-new-game-2').addEventListener('click', () => {
-//     console.log('object')
-//     returnStartScreen();
-// });
+document.querySelector('#btn-new-game-2').addEventListener('click', () => {
+    console.log('object')
+    returnStartScreen();
+});
 
-// document.querySelector('#btn-delete').addEventListener('click', () => {
-//     cells[selected_cell].innerHTML = '';
-//     cells[selected_cell].setAttribute('data-value', 0);
+document.querySelector('#btn-delete').addEventListener('click', () => {
+    cells[selected_cell].innerHTML = '';
+    cells[selected_cell].setAttribute('data-value', 0);
 
-//     let row = Math.floor(selected_cell / CONSTANT.GRID_SIZE);
-//     let col = selected_cell % CONSTANT.GRID_SIZE;
+    let row = Math.floor(selected_cell / CONSTANT.GRID_SIZE);
+    let col = selected_cell % CONSTANT.GRID_SIZE;
 
-//     su_answer[row][col] = 0;
+    su_answer[row][col] = 0;
 
-//     removeErr();
-// })
-// // -------------
+    removeErr();
+})
+// -------------
 
-// const init = () => {
-//     const darkmode = JSON.parse(localStorage.getItem('darkmode'));
-//     document.body.classList.add(darkmode ? 'dark' : 'light');
-//     document.querySelector('meta[name="theme-color"').setAttribute('content', darkmode ? '#1a1a2e' : '#fff');
+const init = () => {
+    const darkmode = JSON.parse(localStorage.getItem('darkmode'));
+    document.body.classList.add(darkmode ? 'dark' : 'light');
+    document.querySelector('meta[name="theme-color"').setAttribute('content', darkmode ? '#1a1a2e' : '#fff');
 
-//     const game = getGameInfo();
+    const game = getGameInfo();
 
-//     document.querySelector('#btn-continue').style.display = game ? 'grid' : 'none';
+    document.querySelector('#btn-continue').style.display = game ? 'grid' : 'none';
 
-//     initGameGrid();
-//     initCellsEvent();
-//     initNumberInputEvent();
+    initGameGrid();
+    initCellsEvent();
+    initNumberInputEvent();
 
-//     if (getPlayerName()) {
-//         name_input.value = getPlayerName();
-//     } else {
-//         name_input.focus();
-//     }
-// }
+    if (getPlayerName()) {
+        name_input.value = getPlayerName();
+    } else {
+        name_input.focus();
+    }
+}
 
-// init();
+init();
