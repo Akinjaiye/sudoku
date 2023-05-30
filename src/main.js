@@ -302,21 +302,21 @@ const initNumberInputEvent = () => {
     })
 }
 
-// const initCellsEvent = () => {
-//     cells.forEach((e, index) => {
-//         e.addEventListener('click', () => {
-//             if (!e.classList.contains('filled')) {
-//                 cells.forEach(e => e.classList.remove('selected'));
+const initCellsEvent = () => {
+    cells.forEach((e, index) => {
+        e.addEventListener('click', () => {
+            if (!e.classList.contains('filled')) {
+                cells.forEach(e => e.classList.remove('selected'));
 
-//                 selected_cell = index;
-//                 e.classList.remove('err');
-//                 e.classList.add('selected');
-//                 resetBg();
-//                 hoverBg(index);
-//             }
-//         })
-//     })
-// }
+                selected_cell = index;
+                e.classList.remove('err');
+                e.classList.add('selected');
+                resetBg();
+                hoverBg(index);
+            }
+        })
+    })
+}
 
 // const startGame = () => {
 //     start_screen.classList.remove('active');
