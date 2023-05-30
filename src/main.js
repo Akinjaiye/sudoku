@@ -203,60 +203,60 @@ const checkErr = (value) => {
         }
     }
 
-//     let index = selected_cell;
+    let index = selected_cell;
 
-//     let row = Math.floor(index / CONSTANT.GRID_SIZE);
-//     let col = index % CONSTANT.GRID_SIZE;
+    let row = Math.floor(index / CONSTANT.GRID_SIZE);
+    let col = index % CONSTANT.GRID_SIZE;
 
-//     let box_start_row = row - row % 3;
-//     let box_start_col = col - col % 3;
+    let box_start_row = row - row % 3;
+    let box_start_col = col - col % 3;
 
-//     for (let i = 0; i < CONSTANT.BOX_SIZE; i++) {
-//         for (let j = 0; j < CONSTANT.BOX_SIZE; j++) {
-//             let cell = cells[9 * (box_start_row + i) + (box_start_col + j)];
-//             if (!cell.classList.contains('selected')) addErr(cell);
-//         }
-//     }
+    for (let i = 0; i < CONSTANT.BOX_SIZE; i++) {
+        for (let j = 0; j < CONSTANT.BOX_SIZE; j++) {
+            let cell = cells[9 * (box_start_row + i) + (box_start_col + j)];
+            if (!cell.classList.contains('selected')) addErr(cell);
+        }
+    }
 
-//     let step = 9;
-//     while (index - step >= 0) {
-//         addErr(cells[index - step]);
-//         step += 9;
-//     }
+    let step = 9;
+    while (index - step >= 0) {
+        addErr(cells[index - step]);
+        step += 9;
+    }
 
-//     step = 9;
-//     while (index + step < 81) {
-//         addErr(cells[index + step]);
-//         step += 9;
-//     }
+    step = 9;
+    while (index + step < 81) {
+        addErr(cells[index + step]);
+        step += 9;
+    }
 
-//     step = 1;
-//     while (index - step >= 9*row) {
-//         addErr(cells[index - step]);
-//         step += 1;
-//     }
+    step = 1;
+    while (index - step >= 9*row) {
+        addErr(cells[index - step]);
+        step += 1;
+    }
 
-//     step = 1;
-//     while (index + step < 9*row + 9) {
-//         addErr(cells[index + step]);
-//         step += 1;
-//     }
-// }
+    step = 1;
+    while (index + step < 9*row + 9) {
+        addErr(cells[index + step]);
+        step += 1;
+    }
+}
 
-// const removeErr = () => cells.forEach(e => e.classList.remove('err'));
+const removeErr = () => cells.forEach(e => e.classList.remove('err'));
 
-// const saveGameInfo = () => {
-//     let game = {
-//         level: level_index,
-//         seconds: seconds,
-//         su: {
-//             original: su.original,
-//             question: su.question,
-//             answer: su_answer
-//         }
-//     }
-//     localStorage.setItem('game', JSON.stringify(game));
-// }
+const saveGameInfo = () => {
+    let game = {
+        level: level_index,
+        seconds: seconds,
+        su: {
+            original: su.original,
+            question: su.question,
+            answer: su_answer
+        }
+    }
+    localStorage.setItem('game', JSON.stringify(game));
+}
 
 // const removeGameInfo = () => {
 //     localStorage.removeItem('game');
