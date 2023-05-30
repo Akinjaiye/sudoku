@@ -64,24 +64,24 @@ let su_answer = undefined;
 
 let selected_cell = -1;
 
-/// --------
+// --------
 
-// const getGameInfo = () => JSON.parse(localStorage.getItem('game'));
+const getGameInfo = () => JSON.parse(localStorage.getItem('game'));
 
-// // add space for each 9 cells
-// const initGameGrid = () => {
-//     let index = 0;
+// add space for each 9 cells
+const initGameGrid = () => {
+    let index = 0;
 
-//     for (let i = 0; i < Math.pow(CONSTANT.GRID_SIZE,2); i++) {
-//         let row = Math.floor(i/CONSTANT.GRID_SIZE);
-//         let col = i % CONSTANT.GRID_SIZE;
-//         if (row === 2 || row === 5) cells[index].style.marginBottom = '10px';
-//         if (col === 2 || col === 5) cells[index].style.marginRight = '10px';
+    for (let i = 0; i < Math.pow(CONSTANT.GRID_SIZE,2); i++) {
+        let row = Math.floor(i/CONSTANT.GRID_SIZE);
+        let col = i % CONSTANT.GRID_SIZE;
+        if (row === 2 || row === 5) cells[index].style.marginBottom = '10px';
+        if (col === 2 || col === 5) cells[index].style.marginRight = '10px';
 
-//         index++;
-//     }
-// }
-// // ----------------
+        index++;
+    }
+}
+// ----------------
 
 // const setPlayerName = (name) => localStorage.setItem('player_name', name);
 // const getPlayerName = () => localStorage.getItem('player_name');
