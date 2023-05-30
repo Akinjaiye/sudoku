@@ -122,32 +122,32 @@ const initSudoku = () => {
     }
 }
 
-// const loadSudoku = () => {
-//     let game = getGameInfo();
+const loadSudoku = () => {
+    let game = getGameInfo();
 
-//     game_level.innerHTML = CONSTANT.LEVEL_NAME[game.level];
+    game_level.innerHTML = CONSTANT.LEVEL_NAME[game.level];
 
-//     su = game.su;
+    su = game.su;
 
-//     su_answer = su.answer;
+    su_answer = su.answer;
 
-//     seconds = game.seconds;
-//     game_time.innerHTML = showTime(seconds);
+    seconds = game.seconds;
+    game_time.innerHTML = showTime(seconds);
 
-//     level_index = game.level;
+    level_index = game.level;
 
-//     // show sudoku to div
-//     for (let i = 0; i < Math.pow(CONSTANT.GRID_SIZE, 2); i++) {
-//         let row = Math.floor(i / CONSTANT.GRID_SIZE);
-//         let col = i % CONSTANT.GRID_SIZE;
+    // show sudoku to div
+    for (let i = 0; i < Math.pow(CONSTANT.GRID_SIZE, 2); i++) {
+        let row = Math.floor(i / CONSTANT.GRID_SIZE);
+        let col = i % CONSTANT.GRID_SIZE;
         
-//         cells[i].setAttribute('data-value', su_answer[row][col]);
-//         cells[i].innerHTML = su_answer[row][col] !== 0 ? su_answer[row][col] : '';
-//         if (su.question[row][col] !== 0) {
-//             cells[i].classList.add('filled');
-//         }
-//     }
-// }
+        cells[i].setAttribute('data-value', su_answer[row][col]);
+        cells[i].innerHTML = su_answer[row][col] !== 0 ? su_answer[row][col] : '';
+        if (su.question[row][col] !== 0) {
+            cells[i].classList.add('filled');
+        }
+    }
+}
 
 // const hoverBg = (index) => {
 //     let row = Math.floor(index / CONSTANT.GRID_SIZE);
