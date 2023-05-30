@@ -188,9 +188,9 @@ const hoverBg = (index) => {
     }
 }
 
-// const resetBg = () => {
-//     cells.forEach(e => e.classList.remove('hover'));
-// }
+const resetBg = () => {
+    cells.forEach(e => e.classList.remove('hover'));
+}
 
 // const checkErr = (value) => {
 //     const addErr = (cell) => {
