@@ -271,36 +271,36 @@ const showResult = () => {
     result_time.innerHTML = showTime(seconds);
 }
 
-// const initNumberInputEvent = () => {
-//     number_inputs.forEach((e, index) => {
-//         e.addEventListener('click', () => {
-//             if (!cells[selected_cell].classList.contains('filled')) {
-//                 cells[selected_cell].innerHTML = index + 1;
-//                 cells[selected_cell].setAttribute('data-value', index + 1);
-//                 // add to answer
-//                 let row = Math.floor(selected_cell / CONSTANT.GRID_SIZE);
-//                 let col = selected_cell % CONSTANT.GRID_SIZE;
-//                 su_answer[row][col] = index + 1;
-//                 // save game
-//                 saveGameInfo()
-//                 // -----
-//                 removeErr();
-//                 checkErr(index + 1);
-//                 cells[selected_cell].classList.add('zoom-in');
-//                 setTimeout(() => {
-//                     cells[selected_cell].classList.remove('zoom-in');
-//                 }, 500);
+const initNumberInputEvent = () => {
+    number_inputs.forEach((e, index) => {
+        e.addEventListener('click', () => {
+            if (!cells[selected_cell].classList.contains('filled')) {
+                cells[selected_cell].innerHTML = index + 1;
+                cells[selected_cell].setAttribute('data-value', index + 1);
+                // add to answer
+                let row = Math.floor(selected_cell / CONSTANT.GRID_SIZE);
+                let col = selected_cell % CONSTANT.GRID_SIZE;
+                su_answer[row][col] = index + 1;
+                // save game
+                saveGameInfo()
+                // -----
+                removeErr();
+                checkErr(index + 1);
+                cells[selected_cell].classList.add('zoom-in');
+                setTimeout(() => {
+                    cells[selected_cell].classList.remove('zoom-in');
+                }, 500);
 
-//                 // check game win
-//                 if (isGameWin()) {
-//                     removeGameInfo();
-//                     showResult();
-//                 }
-//                 // ----
-//             }
-//         })
-//     })
-// }
+                // check game win
+                if (isGameWin()) {
+                    removeGameInfo();
+                    showResult();
+                }
+                // ----
+            }
+        })
+    })
+}
 
 // const initCellsEvent = () => {
 //     cells.forEach((e, index) => {
