@@ -337,15 +337,15 @@ const startGame = () => {
     }, 1000);
 }
 
-// const returnStartScreen = () => {
-//     clearInterval(timer);
-//     pause = false;
-//     seconds = 0;
-//     start_screen.classList.add('active');
-//     game_screen.classList.remove('active');
-//     pause_screen.classList.remove('active');
-//     result_screen.classList.remove('active');
-// }
+const returnStartScreen = () => {
+    clearInterval(timer);
+    pause = false;
+    seconds = 0;
+    start_screen.classList.add('active');
+    game_screen.classList.remove('active');
+    pause_screen.classList.remove('active');
+    result_screen.classList.remove('active');
+}
 
 // // add button event
 // document.querySelector('#btn-level').addEventListener('click', (e) => {
