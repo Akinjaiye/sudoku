@@ -192,16 +192,16 @@ const resetBg = () => {
     cells.forEach(e => e.classList.remove('hover'));
 }
 
-// const checkErr = (value) => {
-//     const addErr = (cell) => {
-//         if (parseInt(cell.getAttribute('data-value')) === value) {
-//             cell.classList.add('err');
-//             cell.classList.add('cell-err');
-//             setTimeout(() => {
-//                 cell.classList.remove('cell-err');
-//             }, 500);
-//         }
-//     }
+const checkErr = (value) => {
+    const addErr = (cell) => {
+        if (parseInt(cell.getAttribute('data-value')) === value) {
+            cell.classList.add('err');
+            cell.classList.add('cell-err');
+            setTimeout(() => {
+                cell.classList.remove('cell-err');
+            }, 500);
+        }
+    }
 
 //     let index = selected_cell;
 
