@@ -1,31 +1,31 @@
-# (Application Name)
+# SUDOKU GAME
 
-#### (Brief Description of Application)
+#### Sudoku is played by filling nine squares with numbers from 1 - 9 without randomly without any form of repetition.
 
-#### By (Your Name Here)
+#### By Durojaiye Akindiji
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML
+* CSS
+* JAVASCRIPT
+* NODE MODULES
+* WEBPACK
 
-## Description
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Go to github.com
+* Search for username Akinjaiye
+* Clone sudoku to your local system
+* Use npm install on your git to add packages
+* Use npm run start to open the app on your browser
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bud
 
-## License
 
-## Contact Information
+## MIT
+
+## akindijiduro@gmail.com
