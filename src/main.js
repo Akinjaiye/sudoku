@@ -258,18 +258,18 @@ const saveGameInfo = () => {
     localStorage.setItem('game', JSON.stringify(game));
 }
 
-// const removeGameInfo = () => {
-//     localStorage.removeItem('game');
-//     document.querySelector('#btn-continue').style.display = 'none';
-// }
+const removeGameInfo = () => {
+    localStorage.removeItem('game');
+    document.querySelector('#btn-continue').style.display = 'none';
+}
 
-// const isGameWin = () => sudokuCheck(su_answer);
+const isGameWin = () => sudokuCheck(su_answer);
 
-// const showResult = () => {
-//     clearInterval(timer);
-//     result_screen.classList.add('active');
-//     result_time.innerHTML = showTime(seconds);
-// }
+const showResult = () => {
+    clearInterval(timer);
+    result_screen.classList.add('active');
+    result_time.innerHTML = showTime(seconds);
+}
 
 // const initNumberInputEvent = () => {
 //     number_inputs.forEach((e, index) => {
