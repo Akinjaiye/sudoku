@@ -1,8 +1,8 @@
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './css/style.css';
-// import icon from './assets/icon.png';
-// import {sudokuCheck,sudokuGen} from './js/sudoku';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+import icon from './assets/icon.png';
+import {sudokuCheck,sudokuGen} from './js/sudoku';
 
 
 
